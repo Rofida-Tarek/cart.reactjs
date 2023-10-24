@@ -17,9 +17,9 @@ export default function Mainslider() {
   };
   return (
     <>
-      <div className="row gx-0 mt-5">
+      <div className="row gx-0 mt-5 py-4">
         <div className="col-md-9 mb-5">
-          <Slider {...settings}>
+          <Slider {...settings} width={100}>
             <img height={400} className="w-100" src={slid1} alt="img1" />
             <img height={400} className="w-100" src={slid2} alt="img2" />
             <img height={400} className="w-100" src={slid3} alt="img2" />

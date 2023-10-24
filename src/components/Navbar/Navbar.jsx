@@ -18,7 +18,7 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top py-3">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">
             <img src={logo} alt="logo" />

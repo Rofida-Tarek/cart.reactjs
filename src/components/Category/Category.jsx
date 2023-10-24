@@ -38,7 +38,7 @@ export default function Category() {
       ) : (
         <div className="row  mt-5 py-4">
           {data.map((Category) => (
-            <div key={Category._id} className="col-md-4 mb-4 p-2">
+            <div key={Category._id} className="col-md-6 col-lg-4 mb-4 p-2">
               <div className="card product products">
                 <img
                   height={300}

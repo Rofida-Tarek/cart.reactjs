@@ -32,7 +32,7 @@ export default function Brand() {
       ) : (
         <div className="row">
           {data?.data.data.map((brand) => (
-            <div key={brand._id} className="col-md-3 mb-4 ">
+            <div key={brand._id} className="  col-md-6 col-lg-3 mb-3">
               <div className="card product products rounded">
                 <img
                   src={brand.image}

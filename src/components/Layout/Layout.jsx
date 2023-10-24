@@ -15,9 +15,10 @@ export default function Layout() {
   return (
     <>
       <Navbar />
-      <div className="container my-5 p-2">
+      <div className="container my-5 ">
         <Outlet></Outlet>
       </div>
+      <Footer />
       <div>
         <Offline>
           <div className="network">
@@ -26,7 +27,6 @@ export default function Layout() {
           </div>
         </Offline>
       </div>
-      <Footer />
     </>
   );
 }

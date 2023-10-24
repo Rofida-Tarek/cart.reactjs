@@ -1,11 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import style from "./Cart.module.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
-import { RotatingLines } from "react-loader-spinner";
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet";
-
 export default function Cart() {
   let {
     price,
@@ -15,37 +13,14 @@ export default function Cart() {
     updateproductqunt,
     clearusercart,
   } = useContext(CartContext);
-  // console.log(products);
   if (products === null) {
     return (
       <div className="container bg-main-light p-5 mt-5 ">
         <h2 className=" fw-bolder p-2 mb-1">Cart Shop</h2>
         <p className=" fw-bolder h2 p-2 mt-1">your cart is empty</p>
-        {/* <Navigate to={"/"} /> */}
       </div>
     );
-
-    // <div className="loading">
-    //   <RotatingLines
-    //     strokeColor="white"
-    //     strokeWidth="5"
-    //     animationDuration="0.75"
-    //     width="96"
-    //     visible={true}
-    //   />
-    // </div>
   }
-  // if (products.length === 0) {
-  //   return (
-  //     <>
-  //       {" "}
-  //       <div className="d-flex justify-content-between mb-2">
-  //         <h2 className="h3 fw-Bolder">Cart Shop</h2>
-  //         <Link className="btn btn-primary fw-bold">Check out</Link>
-  //       </div>
-  //     </>
-  //   );
-  // }
   async function deletitem(id) {
     let data = await deletecartitem(id);
     if (data.status === "success") {
@@ -77,7 +52,6 @@ export default function Cart() {
   async function clearcart() {
     await clearusercart();
   }
-
   return (
     <>
       <Helmet>
@@ -135,6 +109,7 @@ export default function Cart() {
                 }
                 className="btn btn-outline-success"
               >
+                {" "}
                 +
               </button>
               <span className="px-2">{prodduct.count}</span>
